@@ -23,7 +23,7 @@ Then point your browser to this URL:
 
 To package `scala-assembly.jar` via `sbt` [0.10]:
 
-    $ cd sbt; sbt
+    $ sbt
     > assembly
 
 
