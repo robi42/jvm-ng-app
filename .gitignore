@@ -1,0 +1,5 @@
+.DS_Store
+.idea
+.history
+target
+sbt/project/boot
