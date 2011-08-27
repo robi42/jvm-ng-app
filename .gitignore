@@ -2,4 +2,4 @@
 .idea
 .history
 target
-sbt/project/boot
+project/boot
