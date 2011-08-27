@@ -1,1 +1,1 @@
-web: sh bin/ringo-heroku main.js
+web: sh bin/ringo-heroku app.js
