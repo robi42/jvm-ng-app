@@ -1,5 +1,12 @@
 name := "JVM NG"
 
+resolvers ++= Seq(
+  "scala-tools" at "http://nexus.scala-tools.org/content/repositories/public",
+  "codahale" at "http://repo.codahale.com"
+)
+
+libraryDependencies += "com.codahale" %% "simplespec" % "0.3.4" % "test->default"
+
 seq(coffeescript.CoffeeScript.coffeeSettings: _*)
 
 bare in Coffee := true
