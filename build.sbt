@@ -1,5 +1,7 @@
 name := "JVM NG"
 
+unmanagedBase <<= baseDirectory { base => base / "sbt_jars" }
+
 resolvers ++= Seq(
   "scala-tools" at "http://nexus.scala-tools.org/content/repositories/public",
   "codahale" at "http://repo.codahale.com"

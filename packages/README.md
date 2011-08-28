@@ -1,1 +1,1 @@
-NOTE: This directory contains **third-party** packages code.
+NOTE: this directory contains **third-party** packages code.
