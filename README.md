@@ -5,7 +5,11 @@ Its web layer is based on [Stick] and its persistence layer on [Rogue].
 
 ## Dev
 
-To run it locally launch `ringo` <br>
+The app's persistence layer depends on [MongoDB], so start it:
+
+    $ mongod
+
+To run the app locally launch `ringo` <br>
 with the main script via `foreman`:
 
     $ gem install foreman
@@ -48,5 +52,6 @@ Plus, rebuild `scala-assembly.jar` (see above) to include this config update.
   [Heroku]:       http://www.heroku.com/
   [Stick]:        https://github.com/hns/stick
   [Rogue]:        http://engineering.foursquare.com/2011/01/21/rogue-a-type-safe-scala-dsl-for-querying-mongodb/
+  [MongoDB]:      http://www.mongodb.org/
   [CoffeeScript]: http://coffeescript.org/
   [0.10]:         https://github.com/harrah/xsbt/wiki/Setup
