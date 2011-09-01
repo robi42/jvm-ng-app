@@ -1,3 +1,13 @@
 #!/bin/sh
 
-exec java -Xbootclasspath/p:jars/js.jar -Dringo.classpath=jars/** -jar run.jar $1 -p $PORT
+# Set for production env via: `$ heroku config:add`
+# LIFT_PROD="-Drun.mode=production"
+# RINGO_PROD="--production"
+
+exec java $JAVA_OPTS -Xbootclasspath/p:jars/js.jar \
+-Dringo.classpath=jars/** \
+-Dlogback.configurationFile=config/logback.xml \
+$LIFT_PROD \
+-jar run.jar \
+$RINGO_PROD \
+$1 -p $PORT
