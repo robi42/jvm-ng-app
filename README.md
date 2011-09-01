@@ -42,7 +42,7 @@ Plus, rebuild `scala-assembly.jar` (see above) to include this config update.
 
     $ heroku config:add LIFT_PROD=-Drun.mode=production
     $ heroku config:add RINGO_PROD=--production
-    $ git commit -m 'Make it ready for production.'
+    $ git commit -am 'Make it ready for production.'
     $ git push heroku master
     $ heroku open
 
