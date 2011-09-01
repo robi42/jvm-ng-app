@@ -25,7 +25,7 @@ via `sbt` [0.10]:
     $ sbt
     > ~coffee
 
-To package `scala-assembly.jar`:
+To package `jars/scala-assembly.jar`:
 
     $ sbt
     > assembly
@@ -50,7 +50,7 @@ Plus, rebuild `scala-assembly.jar` (see above) to include this config update.
   [RingoJS]:      http://ringojs.org/
   [Scala]:        http://www.scala-lang.org/
   [Heroku]:       http://www.heroku.com/
-  [Stick]:        https://github.com/hns/stick
+  [Stick]:        https://github.com/hns/stick#readme
   [Rogue]:        http://engineering.foursquare.com/2011/01/21/rogue-a-type-safe-scala-dsl-for-querying-mongodb/
   [MongoDB]:      http://www.mongodb.org/
   [CoffeeScript]: http://coffeescript.org/
