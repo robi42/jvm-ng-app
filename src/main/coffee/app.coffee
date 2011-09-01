@@ -1,6 +1,6 @@
-{respondWith, handleCreateOrUpdate} = require './handler'
-{MongoConfig, MainDocs}             = com.robert42.jvmng
-app = exports.app                   = require('./config').app
+{respondWith}           = require './response'
+{MongoConfig, MainDocs} = com.robert42.jvmng
+app = exports.app       = require('./config').app
 
 DOCS_URL = '/docs'
 DOC_URL  = "#{DOCS_URL}/:id"
@@ -12,12 +12,17 @@ app.get '/', (req) ->
 app.get DOCS_URL, ->
   respondWith.json MainDocs.all()
 
-app.post DOCS_URL, handleCreateOrUpdate
+app.post DOCS_URL, (req) ->
+  json = JSON.stringify(req.postParams)
+  respondWith.json MainDocs.create(json)
 
 app.get DOC_URL, (req, id) ->
   respondWith.json MainDocs.get(id)
 
-app.put DOCS_URL, handleCreateOrUpdate
+app.put DOC_URL, (req, id) ->
+  req.postParams._id = id
+  json = JSON.stringify(req.postParams)
+  respondWith.json MainDocs.update(json)
 
 app.del DOC_URL, (req, id) ->
   MainDocs.remove id
