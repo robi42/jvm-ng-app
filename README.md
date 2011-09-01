@@ -1,6 +1,6 @@
 # JVM NG App
 
-This is a minimal [RingoJS]/[Scala] hybrid app targeting deployment to [Heroku].
+This is a minimal [RingoJS]/[Scala] hybrid app targeting deployment to [Heroku]. <br>
 Its web layer is based on [Stick] and its persistence layer on [Rogue].
 
 ## Dev
@@ -37,7 +37,7 @@ To package `scala-assembly.jar`:
     $ heroku addons:add mongolab
     $ heroku config
 
-Now, adjust `src/main/resources/props/production.default.props` accordingly.
+Now, adjust `src/main/resources/props/production.default.props` accordingly. <br>
 Plus, rebuild `scala-assembly.jar` (see above) to include this config update.
 
     $ heroku config:add LIFT_PROD=-Drun.mode=production
