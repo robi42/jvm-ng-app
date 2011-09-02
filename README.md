@@ -19,16 +19,18 @@ Then point your browser to this URL:
 
   http://localhost:5000/
 
-To compile [CoffeeScript] on-the-fly <br>
+To compile + package Scala & [CoffeeScript] on-the-fly <br>
 via `sbt` [0.10]:
 
     $ sbt
-    > ~coffee
+    > ~package
 
-To package `jars/scala-assembly.jar`:
+BTW, for compiling/packaging once just leave off the `~`.
+
+To make an assembly of all `sbt` project lib dependencies:
 
     $ sbt
-    > assembly
+    > assembly:package-dependency
 
 ## Deploy
 
@@ -38,7 +40,7 @@ To package `jars/scala-assembly.jar`:
     $ heroku config
 
 Now, adjust `src/main/resources/props/production.default.props` accordingly. <br>
-Plus, rebuild `scala-assembly.jar` (see above) to include this config update.
+Plus, rebuild `scala-app.jar` (via `> package`) to include this config update.
 
     $ heroku config:add LIFT_PROD=-Drun.mode=production
     $ heroku config:add RINGO_PROD=--production

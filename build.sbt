@@ -6,6 +6,9 @@ scalaVersion := "2.8.1"
 
 unmanagedBase <<= baseDirectory { base => base / "sbt_jars" }
 
+artifactPath in Compile in packageBin <<=
+  baseDirectory { base => base / "jars" / "scala-app.jar" }
+
 resolvers ++= Seq(
   "scala-tools" at "http://nexus.scala-tools.org/content/repositories/public",
   "codahale"    at "http://repo.codahale.com"
@@ -26,6 +29,6 @@ targetDirectory in Coffee := file("lib")
 
 seq(sbtassembly.Plugin.assemblySettings: _*)
 
-outputPath in Assembly := file("jars") / "scala-assembly.jar"
+outputPath in Assembly := file("jars") / "scala-dep.jar"
 
 // test in Assembly := {}
